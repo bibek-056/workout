@@ -16,7 +16,7 @@ app.use((req,res,next) => {
 })
 
 //routing 
-app.use('/api/workouts', workoutRoutes)
+app.use('/api/workouts/', workoutRoutes)
 
 //connect to db
 mongoose.connect(process.env.MONGO_URI)
