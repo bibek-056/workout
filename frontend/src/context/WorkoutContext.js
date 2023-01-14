@@ -18,14 +18,14 @@ export const workoutsReducer = (state, action) => {
     }
 }
 
-export const WorkoutsContextProvider = ({ childern }) => {
+export const WorkoutsContextProvider = ({ children }) => {
     const[state, dispatch] = useReducer(workoutsReducer, {
         workouts: null
     })
 
     return (
         <WorkoutsContext.Provider value={{...state, dispatch}}>
-            { childern }
+            { children }
         </WorkoutsContext.Provider>
     )
 }
